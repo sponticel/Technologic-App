@@ -1,16 +1,19 @@
-const jwt = require('jsonwebtoken')
-const TOKEN_KEY = 'areallylonggoodkey'
- 
- const restrict = (req, res, next) => {
-    try {
-        const token = req.headers.authorization.split(' ')[1]
-        const data = jwt.verify(token, TOKEN_KEY)
-        // res.locals.user = data
-        next()
-    } catch (error) {
-        console.log(error)
-        res.status(403).send('Unauthorized')
-    }
-}
+const express = require('express')
+const db = require('./db/connection')
+const cors = require('cors')
+const bodyParser = require('body-parser')
+const logger = require('morgan')
+const routes = require('./routes')
 
-module.exports = restrict
+const app = express()
+const PORT = process.env.PORT || 3000
+
+app.use(cors())
+app.use(bodyParser.json())
+app.use(logger('dev'))
+
+app.use('/api', routes)
+
+db.on('error', console.error.bind(console, 'MongoDB connection error:'))
+
+app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
