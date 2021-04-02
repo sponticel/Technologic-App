@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "name": "technologic-app",
+  "description": "## Overview Technologic is a community based platform where users can post electronics of their choice and be contacted to sell their products listed. All users can edit and view all posts. Our goal is to create an app that gives the user a seamless experience selling and finding new products.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sponticel/technologic-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sponticel/technologic-app/issues"
+  },
+  "homepage": "https://github.com/sponticel/technologic-app#readme"
+}
