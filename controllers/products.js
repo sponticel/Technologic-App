@@ -1,5 +1,5 @@
 const Product = require('../models/product')
-const db = require('..db/connection')
+const db = require('../db/connection')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
@@ -17,7 +17,7 @@ const getProduct = async (req, res) => {
     const { id } = req.params
     const product = await Product.findById(id)
     if (product) {
-      return res.join(product)
+      return res.json(product)
     }
     res.status(404).json({ message: 'Product not found.' })
   } catch (error) {
