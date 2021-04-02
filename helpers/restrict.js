@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-const TOKEN_KEY = 'areallylonggoodkey'
+const TOKEN_KEY = 'wowthisisastrongkey'
  
  const restrict = (req, res, next) => {
     try {
