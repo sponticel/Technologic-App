@@ -10,7 +10,7 @@ const Schema = mongoose.Schema
 
 const Product = new Schema(
   {
-    productName: { type: String, required: true },
+    name: { type: String, required: true },
     condition: { type: String, required: true },
     imgURL1: { type: String, required: true },
     imgURL2: { type: String, required: true },
