@@ -33,10 +33,10 @@ const User = new Schema(
   ```
 
 ## Whimsical Design
-https://whimsical.com/p3-9RKvnokPd8tk5mvAjAtsvt
+[Whimsical Diagram](https://whimsical.com/p3-9RKvnokPd8tk5mvAjAtsvt)
 
 ## Team Expectations
-https://docs.google.com/document/d/1z5VV2ltSWO__pA7WPStm3Mx5NQPo7FpTK8sMyH2bLEI/edit
+[Expectations Google Doc](https://docs.google.com/document/d/1z5VV2ltSWO__pA7WPStm3Mx5NQPo7FpTK8sMyH2bLEI/edit)
 
 ## MVP
 https://github.com/sponticel/Technologic-App/projects/1
