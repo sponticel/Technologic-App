@@ -55,10 +55,10 @@ const Product = new Schema(
 ```
 
 ## Whimsical Design
-https://learus.github.io/react-material-ui-carousel/
+[Whimsical Diagram](https://learus.github.io/react-material-ui-carousel/)
 
 ## Team Expectations
-https://docs.google.com/document/d/1z5VV2ltSWO__pA7WPStm3Mx5NQPo7FpTK8sMyH2bLEI/edit
+[Expectations Google Doc](https://docs.google.com/document/d/1z5VV2ltSWO__pA7WPStm3Mx5NQPo7FpTK8sMyH2bLEI/edit)
 
 ## Overview
 Technologic is a community based platform where users can post electronics of their choice and be contacted to sell their products listed. All users can edit and view all posts. Our goal is to create an app that gives the user a seamless experience selling and finding new products.
