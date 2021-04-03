@@ -8,9 +8,9 @@ nav {
     z-index: 1;
     top: 0;
     left: 0;
-}
-
-.nav {
+  }
+  
+  .nav {
     display: flex;
     padding: 20px 0;
     margin-left: -2px;
@@ -18,9 +18,10 @@ nav {
     margin-top: -2px;
     box-shadow: 1px 1px 1px .3px #CECECE;
     width: 100%;
-}
-
-.logo {
+    
+  }
+  
+  .logo {
     font-family: 'Kalam', cursive;
     text-align: center;
     font-weight: bold;
@@ -29,13 +30,14 @@ nav {
     flex: 1;
     max-width: 30vw;
     transition: 250ms all;
-}
-
-.logo:hover {
+    color: var(--aqua);
+  }
+  
+  .logo:hover {
     transform: scale(1.004);
-}
-
-.links {
+  }
+  
+  .links {
     flex: 2;
     max-width: 60vw;
     align-items: center;
@@ -49,11 +51,12 @@ nav {
 
 .welcome {
     padding: 0 100px;
+    color: white;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color:white;
 }
 
 @media (max-width: 500px) {

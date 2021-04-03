@@ -4,3 +4,29 @@
   }
 }
 
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-logo {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 72px;
+}
+
+.home-products {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 48px;
+}
+
+.home-sign-in {
+  font-family: 'Bungee', cursive;
+  font-size: 36px;
+}
+
+.home-sign-up {
+  font-family: 'Bungee Outline', cursive;
+  font-size: 36px;
+}
