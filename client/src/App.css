@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
 :root {
   --gunmetal: #00313D;
@@ -16,6 +19,22 @@
 
 .logo {
   font-family: 'Bungee Shade', cursive;
+}
+
+.home-logo {
+  font-family: 'Bungee Shade', cursive;
+}
+
+.home-products {
+  font-family: 'Bungee Inline', cursive;
+}
+
+.home-sign-in {
+  font-family: 'Bungee', cursive;
+}
+
+.home-sign-up {
+  font-family: 'Bungee Outline', cursive;
 }
 
 h1, h2, h3, h4, h5 {
