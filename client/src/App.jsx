@@ -13,6 +13,19 @@ import SignOut from './screens/SignOut/SignOut'
 
 import './App.css'
 
+const App = () => {
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verifyUser()
+      user ? setUser(user) : setUser(null)
+    }
+    fetchUser()
+  }, [])
+
+  const clearUser = () => setUser(null)
+
   return (
     <div className="app">
     </div>
