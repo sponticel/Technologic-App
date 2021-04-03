@@ -8,7 +8,7 @@ const ProductCreate = (props) => {
 
     const [product, setProduct] = useState({
             name: '',
-            description: '',
+            details: '',
             imgURL: '',
             price: ''
         })
@@ -53,18 +53,18 @@ const ProductCreate = (props) => {
                     onChange={handleChange}
                 />
                 <textarea
-                    className="textarea-description"
+                    className="textarea-details"
                     rows={10}
-                    placeholder='Description'
-                    value={product.description}
-                    name='description'
+                    placeholder='Details'
+                    value={product.details}
+                    name='details'
                     required
                     onChange={handleChange}
                 />
                 <input
                     className="input-image-link"
                     placeholder='Image Link'
-                    value={product.imgURL}
+                    value={product.imgURL1}
                     name='imgURL'
                     required
                     onChange={handleChange}

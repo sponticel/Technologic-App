@@ -27,11 +27,11 @@ const ProductDetail = (props) => {
         <Layout user={props.user}>
         <div className="product-detail">
           <h1>product detail screen</h1>
-                <img className="product-detail-image" src={product.imgURL} alt={product.name} />
+                <img className="product-detail-image" src={product.imgURL1} alt={product.name} />
                 <div className="detail">
                     <div className="name">{product.name}</div>
                     <div className="price">{`$${product.price}`}</div>
-                    <div className="description">{product.description}</div>
+                    <div className="details">{product.details}</div>
                     <div className="button-container">
                         <button className="edit-button"><Link className="edit-link" to={`/products/${product._id}/edit`}>Edit</Link></button>
                         <button className="delete-button" onClick={() => deleteProduct(product._id)}>Delete</button>
