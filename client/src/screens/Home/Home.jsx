@@ -9,7 +9,7 @@ const Home = (props) => {
   return (
     <>
       <div className="home">
-        <h1 className="logo">technologic</h1>
+        <h1 className="home-logo">technologic</h1>
         <Link to="/products">
           <div className="home-products">products</div>
         </Link>
