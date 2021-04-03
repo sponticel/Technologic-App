@@ -9,15 +9,15 @@ const Home = (props) => {
   return (
     <>
       <div className="home">
-        <h1 className="logo">technologic</h1>
+        <h1 className="home-logo">technologic</h1>
         <Link to="/products">
           <div className="home-products">products</div>
         </Link>
         <Link to="/sign-in">
-          sign-in
+          <div className="home-sign-in">sign-in</div>
         </Link>
         <Link to="/sign-up">
-          sign-up
+          <div className="home-sign-up">sign-up</div>
         </Link>
       </div>
     </>
