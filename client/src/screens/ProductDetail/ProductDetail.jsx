@@ -25,7 +25,8 @@ const ProductDetail = (props) => {
 
     return (
         <Layout user={props.user}>
-            <div className="product-detail">
+        <div className="product-detail">
+          <h1>product detail screen</h1>
                 <img className="product-detail-image" src={product.imgURL} alt={product.name} />
                 <div className="detail">
                     <div className="name">{product.name}</div>
