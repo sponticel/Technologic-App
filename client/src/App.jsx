@@ -28,6 +28,32 @@ const App = () => {
 
   return (
     <div className="app">
+      <Switch>
+        <Route exact path="/">
+          <Home user={user} />
+        </Route>
+        <Route path="/sign-up">
+          <SignUp setUser={setUser} />
+        </Route>
+        <Route path="/sign-in">
+          <SignIn setUser={setUser} />
+        </Route>
+        <Route path="/sign-out">
+          <SignOut setUser={setUser} clearUser={clearUser} />
+        </Route>
+        <Route exact path="/products">
+          <Products user={user} />
+        </Route>
+        <Route path="/add-product">
+          {user ? <ProductCreate user={user} /> : <Redirect to="/sign-up" />}
+        </Route>
+        <Route exact path="/products/:id/edit">
+          {user ? <ProductEdit user={user} /> : <Redirect to='/' />}
+        </Route>
+        <Route exact path="/products/:id">
+          <ProductDetail user={user} />
+        </Route>
+      </Switch>
     </div>
   )
 }
