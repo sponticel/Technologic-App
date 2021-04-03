@@ -14,10 +14,10 @@ const Home = (props) => {
           <div className="home-products">products</div>
         </Link>
         <Link to="/sign-in">
-          sign-in
+          <div className="home-sign-in">sign-in</div>
         </Link>
         <Link to="/sign-up">
-          sign-up
+          <div className="home-sign-up">sign-up</div>
         </Link>
       </div>
     </>
