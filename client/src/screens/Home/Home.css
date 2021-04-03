@@ -9,24 +9,30 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--aqua);
+  flex: 2;
 }
 
 .home-logo {
   font-family: 'Bungee Shade', cursive;
   font-size: 72px;
+  color: var(--gunmetal);
 }
 
 .home-products {
   font-family: 'Bungee Inline', cursive;
   font-size: 48px;
+  color: var(--gunmetal);
 }
 
 .home-sign-in {
   font-family: 'Bungee', cursive;
   font-size: 36px;
+  color: var(--gunmetal);
 }
 
 .home-sign-up {
   font-family: 'Bungee Outline', cursive;
   font-size: 36px;
+  color: var(--gunmetal);
 }
