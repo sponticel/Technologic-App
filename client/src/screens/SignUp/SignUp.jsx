@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './SignUp.css'
+import Nav from '../../components/shared/Nav/Nav'
 import { signUp, signIn } from '../../services/users'
 import { useHistory } from "react-router-dom"
 
@@ -59,6 +60,7 @@ const SignUp = (props) => {
 
     return (
         <div className="form-container">
+            <Nav />
             <h3>Sign Up</h3>
             <form onSubmit={onSignUp}>
                 <label>Username</label>

@@ -6,14 +6,17 @@ import { createProduct } from '../../services/products'
 
 const ProductCreate = (props) => {
 
-    const [product, setProduct] = useState({
-            name: '',
-            description: '',
-            imgURL: '',
-            price: ''
-        })
 
-    const [isCreated, setCreated] = useState(false)
+  const [isCreated, setCreated] = useState(false);
+
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setProduct({
+      ...product,
+      [name]: value,
+    });
+  };
 
     const handleChange = (event) => {
         const { name, value } = event.target
@@ -53,26 +56,28 @@ const ProductCreate = (props) => {
                     onChange={handleChange}
                 />
                 <textarea
-                    className="textarea-description"
+                    className="textarea-details"
                     rows={10}
-                    placeholder='Description'
-                    value={product.description}
-                    name='description'
+                    placeholder='Details'
+                    value={product.details}
+                    name='details'
                     required
                     onChange={handleChange}
                 />
                 <input
                     className="input-image-link"
                     placeholder='Image Link'
-                    value={product.imgURL}
+                    value={product.imgURL1}
                     name='imgURL'
                     required
                     onChange={handleChange}
-          />
+                />
                 <button type='submit' className="submit-button">Submit</button>
             </form>
         </Layout>
     )
 }
+
+
 
 export default ProductCreate
