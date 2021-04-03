@@ -11,6 +11,7 @@
   align-items: center;
   background-color: var(--aqua);
   flex: 2;
+  height: 100vh;
 }
 
 .home-logo {
