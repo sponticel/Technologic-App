@@ -20,9 +20,15 @@
 
 .home-logo {
   font-family: 'Bungee Shade', cursive;
-  font-size: 96px;
+  font-size: 5vw;
   color: var(--gunmetal);
   transition: var(--t) all;
+}
+
+@media (max-width: 1200px) {
+  .home-logo {
+    font-size: 10vw;
+  }
 }
 
 .home-products {
