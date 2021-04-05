@@ -1,0 +1,67 @@
+@media (max-width: 500px) {
+  .home {
+      padding: 100px 40px;
+  }
+}
+
+:root {
+  --t: 200ms;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--aqua);
+  flex: 2;
+  height: 100vh;
+}
+
+.home-logo {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 5vw;
+  color: var(--gunmetal);
+  transition: var(--t) all;
+}
+
+@media (max-width: 1200px) {
+  .home-logo {
+    font-size: 10vw;
+  }
+}
+
+.home-products {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 48px;
+  color: var(--gunmetal);
+  transition: var(--t) all;
+  margin: 3rem 0;
+}
+
+.home-products:hover {
+  transform: scale(1.2);
+}
+
+.home-sign-in {
+  font-family: 'Bungee', cursive;
+  font-size: 36px;
+  color: var(--gunmetal);
+  transition: var(--t) all;
+}
+
+.home-sign-in:hover {
+  transform: scale(1.2);
+}
+
+.home-sign-up {
+  font-family: 'Bungee Outline', cursive;
+  font-size: 36px;
+  color: var(--gunmetal);
+  transition: var(--t) all;
+}
+
+.home-sign-up:hover {
+  transform: scale(1.2);
+  text-shadow: 1px 1px 2px var(--gunmetal);
+}
