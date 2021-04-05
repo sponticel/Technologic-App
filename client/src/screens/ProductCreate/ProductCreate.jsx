@@ -7,9 +7,13 @@ import { createProduct } from "../../services/products";
 const ProductCreate = (props) => {
   const [product, setProduct] = useState({
     name: "",
-    description: "",
+    condition: "",
+    details: "",
     imgURL: "",
+    imgURL2: "",
+    imgURL3: "",
     price: "",
+    contactInfo: "",
   });
 
   const [isCreated, setCreated] = useState(false);
@@ -44,6 +48,15 @@ const ProductCreate = (props) => {
           onChange={handleChange}
         />
         <input
+          className="condition"
+          placeholder="condition"
+          value={product.condition}
+          name="condition"
+          required
+          autoFocus
+          onChange={handleChange}
+        />
+        <input
           className="input-price"
           placeholder="Price"
           value={product.price}
@@ -61,11 +74,37 @@ const ProductCreate = (props) => {
           onChange={handleChange}
         />
         <input
+          type="text"
+          className="input-contact-info"
+          placeholder="Contact Info"
+          value={product.contactInfo}
+          name="contactInfo"
+          required
+          // autoFocus
+          onChange={handleChange}
+        />
+        <input
           className="input-image-link"
           placeholder="Image Link"
           value={product.imgURL1}
           name="imgURL"
           required
+          onChange={handleChange}
+        />
+        <input
+          className="input-image-link"
+          placeholder="Image Link 2"
+          value={product.imgURL2}
+          name="imgURL2"
+          // required
+          onChange={handleChange}
+        />
+        <input
+          className="input-image-link"
+          placeholder="Image Link 3"
+          value={product.imgURL3}
+          name="imgURL3"
+          // required
           onChange={handleChange}
         />
         <button type="submit" className="submit-button">
