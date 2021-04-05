@@ -32,14 +32,24 @@ const ProductDetail = (props) => {
   return (
     <Layout user={props.user}>
       <div className="product-detail">
-        <h1>product detail screen</h1>
         <img
           className="product-detail-image"
           src={product.imgURL1}
           alt={product.name}
         />
+        <img
+          className="product-detail-image"
+          src={product.imgURL2}
+          alt={product.name}
+        />
+        <img
+          className="product-detail-image"
+          src={product.imgURL3}
+          alt={product.name}
+        />
         <div className="detail">
           <div className="name">{product.name}</div>
+          <div className="condition">{product.condition}</div>
           <div className="price">{`$${product.price}`}</div>
           <div className="details">{product.details}</div>
           <div className="button-container">
