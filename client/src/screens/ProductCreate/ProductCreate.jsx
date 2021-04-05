@@ -9,7 +9,7 @@ const ProductCreate = (props) => {
     name: "",
     condition: "",
     details: "",
-    imgURL: "",
+    imgURL1: "",
     imgURL2: "",
     imgURL3: "",
     price: "",
