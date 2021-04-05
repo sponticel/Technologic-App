@@ -36,7 +36,7 @@ const signIn = async (req, res) => {
   try {
     const { username, password } = req.body
     const user = await User.findOne({ username: username })
-    if (await brcypt.compare(password, user.password_digest)) {
+    if (await bcrypt.compare(password, user.password_digest)) {
       const payload = {
         username: user.username,
         email: user.email
