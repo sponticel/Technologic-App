@@ -87,7 +87,7 @@ const ProductCreate = (props) => {
           className="input-image-link"
           placeholder="Image Link"
           value={product.imgURL1}
-          name="imgURL"
+          name="imgURL1"
           required
           onChange={handleChange}
         />
