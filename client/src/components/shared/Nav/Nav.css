@@ -45,6 +45,11 @@ nav {
     display: flex;
 }
 
+.links a {
+  text-decoration: none;
+  color: var(--white);
+}
+
 .link {
     flex: 1;
 }
