@@ -54,11 +54,6 @@ nav {
     color: white;
 }
 
-a {
-    text-decoration: none;
-    color:white;
-}
-
 @media (max-width: 500px) {
     nav {
         width: 98%;
