@@ -45,6 +45,11 @@ nav {
     display: flex;
 }
 
+.links a {
+  text-decoration: none;
+  color: var(--white);
+}
+
 .link {
     flex: 1;
 }
@@ -52,11 +57,6 @@ nav {
 .welcome {
     padding: 0 100px;
     color: white;
-}
-
-a {
-    text-decoration: none;
-    color:white;
 }
 
 @media (max-width: 500px) {
