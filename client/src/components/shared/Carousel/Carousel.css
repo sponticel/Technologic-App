@@ -1,5 +1,6 @@
 :root {
     --ifw: 425px;
+    --bh: -230px;
 }
 
 /* * {
@@ -33,7 +34,7 @@
 }
 
 .carousel__inner-slide {
-    background-color: lightcyan;
+    /* background-color: lightcyan; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +42,7 @@
 }
 
 .carousel__inner-slide img {
-    width: var(--ifw);
+    max-height: var(--ifw);
     overflow: hidden;
 }
 
@@ -49,3 +50,31 @@
   outline: none;
 }
 
+.carousel-buttons {
+  visibility: hidden;
+}
+
+.carousel button {
+  transition: all 0s;
+}
+
+.carousel:hover .carousel-buttons{
+  visibility: visible;
+}
+
+
+/* .carousel-buttons:hover {
+  visibility: visible;
+  border: black 3px solid;
+} */
+
+.carousel__back-button {
+  position: relative;
+  top: -230px;
+}
+
+.carousel__next-button {
+  position: relative;
+  top: -230px;
+  left: 285px;
+}
