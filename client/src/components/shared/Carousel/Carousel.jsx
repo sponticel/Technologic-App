@@ -11,7 +11,7 @@ import {
 import "pure-react-carousel/dist/react-carousel.es.css";
 import "./Carousel.css"
 
-export default class extends React.Component {
+class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.images = props.images;
@@ -46,3 +46,5 @@ export default class extends React.Component {
     );
   }
 }
+
+export default Carousel
