@@ -1,15 +1,51 @@
+:root {
+    --ifw: 425px;
+}
+
+/* * {
+  border: Highlight solid 3px;
+} */
+
+.carousel {
+    width: var(--ifw);
+    /* overflow: hidden; */
+}
+
 .carousel__slider {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
+    display: flex;
+    flex-direction: column;
+    /* background-color: white; */
+    width: var(--ifw);
+}
+
+.carousel__slider-tray-wrapper {
+    width: fit-content;
+}
+
+.carousel__slider-tray {
+    /* background-color: lightgreen; */
+}
+
+.carousel__slide {
+    /* background-color: lightcoral; */
+    /* width: 425px; */
+    /* overflow: hidden;   */
 }
 
 .carousel__inner-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-color: lightcyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--ifw);
 }
 
 .carousel__inner-slide img {
-  width: 100%;
+    width: var(--ifw);
+    overflow: hidden;
 }
+
+.carousel__slide-focus-ring {
+  outline: none;
+}
+
