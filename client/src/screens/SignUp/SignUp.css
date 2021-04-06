@@ -15,6 +15,7 @@ button {
   border-radius: 3px;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
+
 }
 
 .navbar {
@@ -54,7 +55,7 @@ button {
   align-items: center;
   margin-top: 3em;
 }
-.form-container {
+.signup-form-container {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-gap: 10px;
@@ -64,20 +65,20 @@ button {
   height: 100%;
   margin: 300px auto;
   border: 2px solid #b0bec5;
-  border-radius: 6px;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  box-shadow: 12px 12px 15px 5px #686868;
   transition: all 2s ease;
 }
 
-.form-container .danger {
+.signup-form-container .danger {
   background: #e57373;
 }
 
-.form-container h3 {
+.signup-form-container h3 {
   text-align: center;
 }
 
-.form-container form {
+.signup-form-container form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,7 +86,7 @@ button {
   width: 80%;
 }
 
-.form-container form input {
+.signup-form-container form input {
   width: 100%;
   padding: 0.6em 1em;
   margin: 0.5em auto;
@@ -96,31 +97,33 @@ button {
   transition: all 0.4s ease;
 }
 
-.form-container form input:focus,
-.form-container form input:active {
+.signup-form-container form input:focus,
+.signup-form-container form input:active {
   border: 2px solid #82ada9;
 }
 
-.form-container form input:valid {
+.signup-form-container form input:valid {
   border: 2px solid #66bb6a;
 }
 
-.form-container form button {
+.signup-form-container form button {
   width: 50%;
   margin: 1em auto;
-  background: #56c8d8;
+  background: var(--aqua);
   border: none;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.form-container form button:hover {
+.signup-form-container form button:hover {
   box-shadow: 3px 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-.form-container form a {
+.signup-form-container form a {
   margin: auto;
 }
 
-.form-container form label {
+.signup-form-container form label {
   margin-top: 0.6em;
 }
 
@@ -234,12 +237,12 @@ button {
 }
 
 .item-container .item button {
-  background: #0097a7;
+  background: var(--aqua);
   color: #f8f8f8;
 }
 
 .item-container .item button:hover {
-  background: #56c8d8;
+  background: var(--aqua);
   color: #333;
 }
 
@@ -335,5 +338,16 @@ button {
 }
 
 .signup-quote{
-  background-color: #9FFFCB;
+  background-color: var(--aqua);
+  font-family: 'Bungee Shade', cursive;
+}
+
+.signup-quote h1{
+  font-family: 'Bungee Shade', cursive;
+  color: var(--gunmetal);
+  text-align: center;
+}
+
+.input-container{
+  padding: 15px;
 }

@@ -68,7 +68,7 @@ const SignUp = (props) => {
   }
 
   return (
-    <div className="form-container">
+    <div className="signup-form-container">
       <div className="signup-quote">
         <h1>Technologic</h1>
         <h3>Inspirational quote</h3>
