@@ -1,8 +1,8 @@
 import React from "react";
 import {
   CarouselProvider,
-  Dot,
-  DotGroup,
+  // Dot,   
+  // DotGroup,
   Slider,
   Slide,
   ButtonBack,
@@ -27,7 +27,7 @@ class Carousel extends React.Component {
       <CarouselProvider
         naturalSlideWidth={100}
         naturalSlideHeight={125}  
-        totalSlides={3}
+        totalSlides={this.images.length}
         dragEnabled={false}
         infinite={true}
         isIntrinsicHeight={true}
@@ -35,7 +35,7 @@ class Carousel extends React.Component {
       >
         <Slider>
           {this.images.map((i) => (
-            <Slide key={key++}index={0}>
+            <Slide key={`carousel-img-key-${key++}`} index={key}>
               <img src={i} alt="" />
             </Slide>
           ))}
