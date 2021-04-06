@@ -68,8 +68,13 @@ const SignUp = (props) => {
   }
 
   return (
-    <div className="form-container">
+    <div className="signup-form-container">
+      <div className="signup-quote">
+        <h1>Technologic</h1>
+        <h3><em>Inspirational quote</em></h3>
+      </div>
       <Nav />
+      <div className="input-container">
       <h3>Sign Up</h3>
       <form onSubmit={onSignUp}>
         <label>Username</label>
@@ -109,7 +114,8 @@ const SignUp = (props) => {
           onChange={handleChange}
         />
         {renderError()}
-      </form>
+        </form>
+        </div>
     </div>
   );
 };
