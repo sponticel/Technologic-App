@@ -22,6 +22,7 @@ export default class extends React.Component {
   componentWillUnmount() {}
 
   render() {
+    let key = 0
     return (
       <CarouselProvider
         naturalSlideWidth={100}
@@ -34,7 +35,7 @@ export default class extends React.Component {
       >
         <Slider>
           {this.images.map((i) => (
-            <Slide index={0}>
+            <Slide key={key++}index={0}>
               <img src={i} alt="" />
             </Slide>
           ))}
