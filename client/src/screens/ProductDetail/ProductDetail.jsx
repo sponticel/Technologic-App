@@ -4,6 +4,8 @@ import Layout from "../../components/shared/Layout/Layout";
 import { getProduct, deleteProduct } from "../../services/products";
 import { useParams, Link, useHistory } from "react-router-dom";
 
+import Carousel from '../../components/shared/Carousel/Carousel'
+
 const ProductDetail = (props) => {
   const [product, setProduct] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
@@ -28,11 +30,11 @@ const ProductDetail = (props) => {
     deleteProduct(product._id)
     history.push('/products')
   }
-
+  const images = [product.imgURL1, product.imgURL2, product.imgURL3]
   return (
     <Layout user={props.user}>
       <div className="product-detail">
-        <img
+        {/* <img
           className="product-detail-image"
           src={product.imgURL1}
           alt={product.name}
@@ -46,7 +48,8 @@ const ProductDetail = (props) => {
           className="product-detail-image"
           src={product.imgURL3}
           alt={product.name}
-        />
+        /> */}
+        <Carousel images={images}/>
         <div className="detail">
           <div className="name">{product.name}</div>
           <div className="condition">{product.condition}</div>
