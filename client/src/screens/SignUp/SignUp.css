@@ -55,11 +55,14 @@ button {
   margin-top: 3em;
 }
 .form-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
   align-self: center;
   padding: 1em;
-  width: 50%;
-  height: 80%;
-  margin: 4em auto;
+  width: 80%;
+  height: 100%;
+  margin: 300px auto;
   border: 2px solid #b0bec5;
   border-radius: 6px;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
@@ -329,4 +332,8 @@ button {
   grid-template-rows: auto;
   width: 80%;
   margin: 4em auto;
+}
+
+.signup-quote{
+  background-color: #9FFFCB;
 }
