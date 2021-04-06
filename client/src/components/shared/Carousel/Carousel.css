@@ -42,7 +42,7 @@
 }
 
 .carousel__inner-slide img {
-    width: var(--ifw);
+    max-height: var(--ifw);
     overflow: hidden;
 }
 
