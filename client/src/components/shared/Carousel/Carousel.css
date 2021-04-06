@@ -1,13 +1,7 @@
-.carousel {
-  margin: 0;
-  max-width: 100%;
-}
-
 .carousel__slider {
   display: flex;
   flex-direction: column;
   background-color: white;
-  
 }
 
 .carousel__inner-slide {
@@ -17,5 +11,5 @@
 }
 
 .carousel__inner-slide img {
-  width: 80%;
+  width: 100%;
 }
