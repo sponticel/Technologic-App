@@ -9,16 +9,15 @@ import {
   ButtonNext,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
+import "./Carousel.css"
 
 export default class extends React.Component {
   constructor(props) {
     super(props);
-    this.images = props.images[0];
+    this.images = props.images;
   }
 
-  componentDidMount() {
-    this.hasMasterSpinner = false
-  }
+  componentDidMount() {}
 
   componentWillUnmount() {}
 
@@ -31,19 +30,15 @@ export default class extends React.Component {
         dragEnabled={false}
         infinite={true}
         isIntrinsicHeight={true}
+        hasMasterSpinner={false}
       >
         <Slider>
-          <Slide index={0}>
-            <img src={this.images.url_1} alt="" />
-          </Slide>
-          <Slide index={1}>
-            <img src={this.images.url_2} alt="" />
-          </Slide>
-          <Slide index={2}>
-            <img src={this.images.url_3} alt="" />
-          </Slide>
+          {this.images.map((i) => (
+            <Slide index={0}>
+              <img src={i} alt="" />
+            </Slide>
+          ))}
         </Slider>
-        <DotGroup /> 
         <ButtonBack>Back</ButtonBack>
         <ButtonNext>Next</ButtonNext>
       </CarouselProvider>
