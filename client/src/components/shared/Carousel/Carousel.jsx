@@ -25,7 +25,7 @@ class Carousel extends React.Component {
     let key = 0
     return (
       <CarouselProvider
-        naturalSlideWidth={100}
+        naturalSlideWidth={100  }
         naturalSlideHeight={125}  
         totalSlides={this.images.length}
         dragEnabled={false}
@@ -40,8 +40,10 @@ class Carousel extends React.Component {
             </Slide>
           ))}
         </Slider>
-        <ButtonBack>Back</ButtonBack>
-        <ButtonNext>Next</ButtonNext>
+        <div className="carousel-buttons">
+          <ButtonBack>Back</ButtonBack>
+          <ButtonNext>Next</ButtonNext>
+        </div>
       </CarouselProvider>
     );
   }
