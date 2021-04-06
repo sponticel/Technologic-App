@@ -71,7 +71,7 @@ const SignUp = (props) => {
     <div className="signup-form-container">
       <div className="signup-quote">
         <h1>Technologic</h1>
-        <h3>Inspirational quote</h3>
+        <h3><em>Inspirational quote</em></h3>
       </div>
       <Nav />
       <div className="input-container">

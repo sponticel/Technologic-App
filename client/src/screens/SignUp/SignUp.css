@@ -60,7 +60,6 @@ button {
   grid-template-columns: 50% 50%;
   grid-gap: 10px;
   align-self: center;
-  padding: 1em;
   width: 80%;
   height: 100%;
   margin: 300px auto;
@@ -338,16 +337,22 @@ button {
 }
 
 .signup-quote{
-  background-color: var(--aqua);
+  display: flex;
+  flex-flow: column;
   font-family: 'Bungee Shade', cursive;
+  border-radius: 15px;
+  text-align: center;
+  justify-content: center;
+  background-image: url("https://i.imgur.com/NxjobHv.png");
+  background-position: center;
+  background-color: var(--aqua);
 }
 
 .signup-quote h1{
   font-family: 'Bungee Shade', cursive;
   color: var(--gunmetal);
-  text-align: center;
 }
 
 .input-container{
-  padding: 15px;
+  padding-right: 40px;
 }
