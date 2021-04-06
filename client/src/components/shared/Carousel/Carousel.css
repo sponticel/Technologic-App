@@ -1,5 +1,6 @@
 .carousel {
-  width: 100%;
+  margin: 0;
+  max-width: 100%;
 }
 
 .carousel__slider {
@@ -16,9 +17,9 @@
 }
 
 .carousel__inner-slide img {
-  width: 100%;
+  width: 80%;
 }
 
 button {
-  height: 20px;
+  /* height: 20px; */
 }
