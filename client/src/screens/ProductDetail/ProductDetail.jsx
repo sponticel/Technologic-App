@@ -34,21 +34,6 @@ const ProductDetail = (props) => {
   return (
     <Layout user={props.user}>
       <div className="product-detail">
-        {/* <img
-          className="product-detail-image"
-          src={product.imgURL1}
-          alt={product.name}
-        />
-        <img
-          className="product-detail-image"
-          src={product.imgURL2}
-          alt={product.name}
-        />
-        <img
-          className="product-detail-image"
-          src={product.imgURL3}
-          alt={product.name}
-        /> */}
         <Carousel images={images}/>
         <div className="detail">
           <div className="name">{product.name}</div>
