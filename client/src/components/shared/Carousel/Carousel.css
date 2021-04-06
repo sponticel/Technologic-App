@@ -1,0 +1,24 @@
+.carousel {
+  width: 100%;
+}
+
+.carousel__slider {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  
+}
+
+.carousel__inner-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel__inner-slide img {
+  width: 100%;
+}
+
+button {
+  height: 20px;
+}
