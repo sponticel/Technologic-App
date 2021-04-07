@@ -43,7 +43,7 @@ const ProductDetail = (props) => {
           <div className="button-container">
             <Link className="edit-link" to={`/products/${product._id}/edit`}>
               <button className="edit-button">
-                Edit
+              Edit
               </button>
             </Link>
             <button
