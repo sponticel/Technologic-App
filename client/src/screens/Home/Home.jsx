@@ -17,7 +17,7 @@ const Home = (props) => {
           <div className="home-sign-in">sign-in</div>
         </Link>
         <Link to="/sign-up">
-          <div className="home-sign-up">sign-up</div>
+          <div className="home-sign-up"><strong>sign-up</strong></div>
         </Link>
       </div>
     </>
