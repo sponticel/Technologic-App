@@ -68,34 +68,34 @@ const SignUp = (props) => {
   }
 
   return (
+    <>
+    <Nav />
     <div className="signup-form-container">
       <div className="signup-quote">
         <h1>Technologic</h1>
         <h3><em>Inspirational quote</em></h3>
       </div>
-      <Nav />
-      <div className="input-container">
-      <h3>Sign Up</h3>
+        <div className="input-container">
       <form onSubmit={onSignUp}>
-        <label>Username</label>
+        <label className="label">Username</label>
         <input
           required
           type="text"
           name="username"
           value={username}
-          placeholder="Enter username"
+          placeholder="Username"
           onChange={handleChange}
         />
-        <label>Email address</label>
+        <label className="label">Email address</label>
         <input
           required
           type="email"
           name="email"
           value={email}
-          placeholder="Enter email"
+          placeholder="Email"
           onChange={handleChange}
         />
-        <label>Password</label>
+        <label className="label">Password</label>
         <input
           required
           name="password"
@@ -104,7 +104,7 @@ const SignUp = (props) => {
           placeholder="Password"
           onChange={handleChange}
         />
-        <label>Password Confirmation</label>
+        <label className="label">Password Confirmation</label>
         <input
           required
           name="passwordConfirmation"
@@ -116,8 +116,9 @@ const SignUp = (props) => {
         {renderError()}
         </form>
         </div>
-    </div>
-  );
+      </div>
+      </>
+  );   
 };
 
 export default SignUp;
