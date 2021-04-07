@@ -12,8 +12,8 @@ const Product = (props) => {
                   {/* <div className="product-image-container"> */}
                       {/* <img className="product-image" src={props.imgURL1} alt={props.name} /> */}
                       <div className="middle">
-                        {props.name}
-                        {props.price}
+                        <div className="middle-info">{props.name}</div>
+                        <div className="middle-info">${props.price}</div>
                       </div>
                   {/* </div> */}
                 {/* <img className="product-image" src={props.imgURL2} alt={props.name} />
