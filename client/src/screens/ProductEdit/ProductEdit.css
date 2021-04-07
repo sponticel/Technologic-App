@@ -1,7 +1,16 @@
-product-edit {
+.product-edit {
   display: flex;
   padding: 100px;
   padding-top: 80px;
+}
+
+.product-edit input {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 5px;
+}
+
+.product-edit textarea {
+  border: var(--aqua) solid 1px;
 }
 
 .image-container {
@@ -17,26 +26,33 @@ product-edit {
 }
 
 .edit-input-image-link {
-  width: 300px;
+  width: 300px;  
   text-align: center;
   font-size: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.edit-input-image-link:focus {
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .edit-form {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.6;
 }
 
+.edit-form-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .input-name {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 64px;
   letter-spacing: 1px;
   padding: 5px;
 }
 
 .textarea-description {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
   padding: 10px;
   letter-spacing: .9px;
@@ -45,15 +61,18 @@ product-edit {
 
 .save-button {
   font-size: 22px;
-  font-family: Arial, Helvetica, sans-serif;
   height: 40px;
   width: 200px;
   margin-top: 40px;
-  background-color: black;
-  color: white;
+  background-color: var(--aqua);
+  color: var(--gunmetal);
   border: none;
-  box-shadow: 2px 2px 10px 2px #CECECE;
+  /* box-shadow: 2px 2px 10px 2px #CECECE; */
+  box-shadow: none;
   cursor: pointer;
+  font-size: 1rem;
+  padding: 0.6em 1em;
+  border-radius: 3px;
 }
 
 @media (max-width: 500px) {
