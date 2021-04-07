@@ -49,8 +49,8 @@ const ProductCreate = (props) => {
           onChange={handleChange}
         />
         <input
-          className="condition"
-          placeholder="condition"
+          className="input-condition"
+          placeholder="Condition"
           value={product.condition}
           name="condition"
           required
