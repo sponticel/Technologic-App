@@ -41,11 +41,11 @@ const ProductDetail = (props) => {
           <div className="price">{`$${product.price}`}</div>
           <div className="details">{product.details}</div>
           <div className="button-container">
-            <button className="edit-button">
-              <Link className="edit-link" to={`/products/${product._id}/edit`}>
+            <Link className="edit-link" to={`/products/${product._id}/edit`}>
+              <button className="edit-button">
                 Edit
-              </Link>
-            </button>
+              </button>
+            </Link>
             <button
               className="delete-button"
               onClick={delProd}
