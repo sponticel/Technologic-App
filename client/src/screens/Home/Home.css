@@ -16,6 +16,9 @@
   background-color: var(--aqua);
   flex: 2;
   height: 100vh;
+  background-image: url(https://i.imgur.com/NxjobHv.png);
+  background-repeat: no-repeat;
+  background-size:100vw 100vh;
 }
 
 .home-logo {
@@ -64,4 +67,10 @@
 .home-sign-up:hover {
   transform: scale(1.2);
   text-shadow: 1px 1px 2px var(--gunmetal);
+}
+
+@media only screen and (max-width:700px){
+  .home{
+  background-image: none;
+  }
 }
