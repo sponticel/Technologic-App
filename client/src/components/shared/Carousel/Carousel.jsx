@@ -39,7 +39,7 @@ class Carousel extends React.Component {
             {this.images.map((i) => (
               <>
                 <Slide key={`carousel-img-key-${key++}`} index={key}>
-                  <img src={i} alt="" />
+                  <img id="myImg" src={i} alt="" />
                 </Slide>
               </>
             ))}

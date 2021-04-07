@@ -70,6 +70,7 @@
 }
 
 .carousel button {
+  background-color: var(--aqua);
   transition: all 0s;
 }
 
@@ -77,6 +78,13 @@
   visibility: visible;
 }
 
+.carousel__next-button,
+.carousel__back-button {
+  border: none;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
 .carousel__back-button {
   position: relative;
   top: -230px;
@@ -85,5 +93,5 @@
 .carousel__next-button {
   position: relative;
   top: -230px;
-  left: 335px;
+  left: 345px;
 }
