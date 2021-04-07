@@ -5,7 +5,7 @@ import Layout from "../../components/shared/Layout/Layout";
 import { getProduct, updateProduct } from "../../services/products";
 
 const ProductEdit = (props) => {
-  const params = useParams()
+  const params = useParams();
   const [product, setProduct] = useState({
     name: "",
     details: "",
@@ -13,7 +13,7 @@ const ProductEdit = (props) => {
     imgURL1: "",
     imgURL2: "",
     imgURL3: "",
-    condition:"",
+    condition: "",
     price: "",
   });
 
@@ -38,7 +38,7 @@ const ProductEdit = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
+
     let { id } = params;
     const updated = await updateProduct(id, product);
     setUpdated(updated);
@@ -51,40 +51,13 @@ const ProductEdit = (props) => {
   return (
     <Layout user={props.user}>
       <div className="product-edit">
-        <div className="image-container">
-          <img
+        {/* <div className="image-container"> */}
+        {/* <img
             className="edit-product-image"
             src={product.imgURL1}
             alt={product.name}
-          />
-          <form onSubmit={handleSubmit}>
-            <input
-              className="edit-input-image-link"
-              placeholder="Image Link"
-              value={product.imgURL1}
-              name="imgURL1"
-              required
-              onChange={handleChange}
-            />
-            <input
-              className="edit-input-image-link"
-              placeholder="Image Link"
-              value={product.imgURL2}
-              name="imgURL2"
-              required
-              onChange={handleChange}
-            />
-            <input
-            className="edit-input-image-link"
-            placeholder="Image Link"
-            value={product.imgURL3}
-            name="imgURL3"
-            required
-            onChange={handleChange}
-          />
-          </form>
-        </div>
-        <form className="edit-form" onSubmit={handleSubmit}>
+          /> */}
+        <form className="edit-form-main" onSubmit={handleSubmit}>
           <input
             className="input-name"
             placeholder="Name"
@@ -92,6 +65,30 @@ const ProductEdit = (props) => {
             name="name"
             required
             autoFocus
+            onChange={handleChange}
+          />
+          <input
+            className="edit-input-image-link"
+            placeholder="Image Link"
+            value={product.imgURL1}
+            name="imgURL1"
+            required
+            onChange={handleChange}
+          />
+          <input
+            className="edit-input-image-link"
+            placeholder="Image Link"
+            value={product.imgURL2}
+            name="imgURL2"
+            required
+            onChange={handleChange}
+          />
+          <input
+            className="edit-input-image-link"
+            placeholder="Image Link"
+            value={product.imgURL3}
+            name="imgURL3"
+            required
             onChange={handleChange}
           />
           <input
