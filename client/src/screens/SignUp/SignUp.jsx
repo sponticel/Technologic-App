@@ -70,8 +70,8 @@ const SignUp = (props) => {
   return (
     <>
     <Nav />
-    <div className="signup-form-container">
-      <div className="signup-quote">
+    <div className="form-container">
+      <div className="quote">
         <h1>Technologic</h1>
         <h3><em>Inspirational quote</em></h3>
       </div>
