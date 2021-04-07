@@ -10,6 +10,7 @@ import ProductDetail from './screens/ProductDetail/ProductDetail'
 import SignUp from './screens/SignUp/SignUp'
 import SignIn from './screens/SignIn/SignIn'
 import SignOut from './screens/SignOut/SignOut'
+import UserDetail from './screens/UserDetail/UserDetail'
 
 import './App.css'
 
@@ -19,6 +20,7 @@ const App = () => {
   useEffect(() => {
     const fetchUser = async () => {
       const user = await verifyUser()
+      console.log(user)
       user ? setUser(user) : setUser(null)
     }
     fetchUser()
@@ -52,6 +54,9 @@ const App = () => {
         </Route>
         <Route exact path="/products/:id">
           <ProductDetail user={user} />
+        </Route>
+        <Route to="/user">
+          <UserDetail user={user} />
         </Route>
       </Switch>
     </div>
