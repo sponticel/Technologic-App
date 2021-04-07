@@ -37,7 +37,8 @@ const ProductCreate = (props) => {
   }
   return (
     <Layout user={props.user}>
-      <form className="create-form" onSubmit={handleSubmit}>
+      <div className="create-form">
+      <form className="input-add" onSubmit={handleSubmit}>
         <input
           className="input-name"
           placeholder="Name"
@@ -53,7 +54,7 @@ const ProductCreate = (props) => {
           value={product.condition}
           name="condition"
           required
-          autoFocus
+          // autoFocus
           onChange={handleChange}
         />
         <input
@@ -85,7 +86,7 @@ const ProductCreate = (props) => {
         />
         <input
           className="input-image-link"
-          placeholder="Image Link"
+          placeholder="Image Link 1"
           value={product.imgURL1}
           name="imgURL1"
           required
@@ -110,7 +111,8 @@ const ProductCreate = (props) => {
         <button type="submit" className="submit-button">
           Submit
         </button>
-      </form>
+        </form>
+        </div>
     </Layout>
   );
 };
