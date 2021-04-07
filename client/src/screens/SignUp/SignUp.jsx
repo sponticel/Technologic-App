@@ -72,12 +72,13 @@ const SignUp = (props) => {
 
   return (
     <>
-      <Nav />
-      <div className="signup-form-container">
-        <div className="signup-quote">
-          <h1>Technologic</h1>
-          {/* <h3><em>Inspirational quote</em></h3> */}
-        </div>
+
+    <Nav />
+    <div className="form-container">
+      <div className="quote">
+        <h1>Technologic</h1>
+        <h3><em>Inspirational quote</em></h3>
+      </div>
         <div className="input-container">
           <form onSubmit={onSignUp}>
             <label className="label">Username</label>

@@ -55,7 +55,7 @@ body {
   align-items: center;
   margin-top: 3em;
 }
-.signup-form-container {
+.form-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 10px;
@@ -70,15 +70,15 @@ body {
   overflow: hidden;
 }
 
-.signup-form-container .danger {
+.form-container .danger {
   background: #e57373;
 }
 
-.signup-form-container h3 {
+.form-container h3 {
   text-align: center;
 }
 
-.signup-form-container form {
+.form-container form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -86,7 +86,7 @@ body {
   width: 80%;
 }
 
-.signup-form-container form input {
+.form-container form input {
   width: 100%;
   padding: 0.6em 1em;
   margin: 0.5em auto;
@@ -97,16 +97,16 @@ body {
   transition: all 0.4s ease;
 }
 
-.signup-form-container form input:focus,
-.signup-form-container form input:active {
+.form-container form input:focus,
+.form-container form input:active {
   border: 2px solid #82ada9;
 }
 
-.signup-form-container form input:valid {
+.form-container form input:valid {
   border: 2px solid #66bb6a;
 }
 
-.signup-form-container form button {
+.form-container form button {
   width: 50%;
   margin: 1em auto;
   background: var(--aqua);
@@ -115,15 +115,15 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.signup-form-container form button:hover {
+.form-container form button:hover {
   box-shadow: 3px 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-.signup-form-container form a {
+.form-container form a {
   margin: auto;
 }
 
-.signup-form-container form label {
+.form-container form label {
   margin-top: 0.6em;
 }
 
@@ -337,7 +337,7 @@ body {
   margin: 4em auto;
 }
 
-.signup-quote{
+.quote{
   display: flex;
   flex-flow: column;
   font-family: 'Bungee Shade', cursive;
@@ -348,7 +348,7 @@ body {
   background-color: var(--aqua);
 }
 
-.signup-quote h1{
+.quote h1{
   font-family: 'Bungee Shade', cursive;
   color: var(--gunmetal);
   padding: 5px 30px;
@@ -361,21 +361,21 @@ body {
 }
 
 @media only screen and (max-width:1000px){
-  .signup-form-container{
+  .form-container{
   display: flex;
   flex-direction: column;
   
   }
-  .signup-quote{
+  .quote{
     background-image: none;
   }
   
 }
 @media only screen and (max-width:700px){
-  .signup-quote{
+  .quote{
   display: none;
   }
-  .signup-form-container{
+  .form-container{
   margin-top: 150px;
   padding: 0px;
   }
