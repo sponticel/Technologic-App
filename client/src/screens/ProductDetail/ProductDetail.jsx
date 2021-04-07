@@ -30,7 +30,9 @@ const ProductDetail = (props) => {
     deleteProduct(product._id)
     history.push('/products')
   }
-  const images = [product.imgURL1, product.imgURL2, product.imgURL3]
+  const images = [product.imgURL1, product.imgURL2]
+  if (product.imgURL3) images.push(product.imgURL3)
+  
   return (
     <Layout user={props.user}>
       <div className="product-detail">
