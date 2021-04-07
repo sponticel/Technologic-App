@@ -41,7 +41,7 @@
   opacity: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   /* position: absolute; */
   /* top: 50%;
   left: 50%; */
@@ -53,7 +53,10 @@
   font-size: 25px;
   /* padding: 100px; */
   /* border: solid gold 4px; */
-  text-indent: 50px;
+  /* text-indent: 50px; */
+  background-color: black;
+  height: 100%;
+  width: 100%;
 }
 
 .middle-info {
@@ -62,18 +65,18 @@
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  right: -30px;
+  
   text-decoration: none; 
-  color: black;
+  color: white;
 }
 
 .product-card:hover {
-  opacity: 0.5;
-  background-color: black;
+  /* opacity: 0.5; */
+  /* background-color: black; */
 }
 
-.product-card:hover .middle {
-  opacity: 1;
+.product-card:hover .middle:hover {
+  opacity: 0.5;
   
 }
 
