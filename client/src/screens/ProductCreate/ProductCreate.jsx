@@ -9,20 +9,20 @@ const ProductCreate = (props) => {
     name: "",
     condition: "",
     details: "",
-    images: [...Array(3).fill('')],
+    images: [...Array(3).fill("")],
     price: "",
     contactInfo: "",
-    userId: props.user.id
+    userId: props.user.id,
   });
 
   const [isCreated, setCreated] = useState(false);
 
   const handleChange = (event) => {
-    const images = [...product.images]
+    const images = [...product.images];
     const { name, value } = event.target;
-    const i = event.target.id
-    images[i] = value
-    if (name === 'images') {
+    const i = event.target.id;
+    images[i] = value;
+    if (name === "images") {
       setProduct({
         ...product,
         images: [...images],
@@ -31,7 +31,7 @@ const ProductCreate = (props) => {
       setProduct({
         ...product,
         [name]: value,
-      })
+      });
     }
   };
 
@@ -44,21 +44,20 @@ const ProductCreate = (props) => {
   if (isCreated) {
     return <Redirect to={`/products`} />;
   }
-  
+
   const addImage = (img, i) => {
     return (
-      <>
-        <input
-          className="input-image-link"
-          placeholder="Image Link"
-          id={i}
-          value={img}
-          name={`images`}
-          onChange={handleChange}
-        />
-      </>
+      <input
+        key={i}
+        className="input-image-link"
+        placeholder="Image Link"
+        id={i}
+        value={img}
+        name={`images`}
+        onChange={handleChange}
+      />
     );
-  }
+  };
 
   return (
     <Layout user={props.user}>
@@ -109,30 +108,6 @@ const ProductCreate = (props) => {
             onChange={handleChange}
           />
           {product.images.map((v, i) => addImage(v, i))}
-          {/* <input
-          className="input-image-link"
-          placeholder="Image Link 1"
-          value={product.imgURL1}
-          name="imgURL1"
-          required
-          onChange={handleChange}
-        />
-        <input
-          className="input-image-link"
-          placeholder="Image Link 2"
-          value={product.imgURL2}
-          name="imgURL2"
-          // required
-          onChange={handleChange}
-        />
-        <input
-          className="input-image-link"
-          placeholder="Image Link 3"
-          value={product.imgURL3}
-          name="imgURL3"
-          // required
-          onChange={handleChange}
-        /> */}
           <button type="submit" className="submit-button">
             Submit
           </button>
