@@ -111,7 +111,6 @@ const ProductCreate = (props) => {
           <button type="submit" className="submit-button">
               Submit
           </button>
-          </div>
         </form>
       </div>
     </Layout>
