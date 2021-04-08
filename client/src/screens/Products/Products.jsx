@@ -49,7 +49,7 @@ const Products = (props) => {
   const handleSubmit = event => event.preventDefault()
 
   const productsJSX = queriedProducts.map((product, index) =>
-    <Product _id={product._id} name={product.name} imgURL1={product.imgURL1} price={product.price} key={index} />
+    <Product _id={product._id} name={product.name} images={product.images} price={product.price} key={index} />
   )
 
   return (
