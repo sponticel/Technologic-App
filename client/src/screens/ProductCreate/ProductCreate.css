@@ -21,10 +21,6 @@ input:focus, textarea:focus, select:focus {
 }
 
 input, textarea { 
-<<<<<<< HEAD
-  
-=======
->>>>>>> 631d3915bfc5f8770706fbd8e9a9d7bcfb6c96b6
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
