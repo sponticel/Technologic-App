@@ -12,6 +12,7 @@ const ProductCreate = (props) => {
     images: [...Array(3).fill('')],
     price: "",
     contactInfo: "",
+    userId: props.user.id
   });
 
   const [isCreated, setCreated] = useState(false);

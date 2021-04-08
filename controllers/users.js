@@ -23,7 +23,8 @@ const signUp = async (req, res) => {
 
     const payload = {
       username: user.username,
-      email: user.email
+      email: user.email,
+      id: user._id
     }
 
     const token = jwt.sign(payload, TOKEN_KEY)
@@ -40,7 +41,8 @@ const signIn = async (req, res) => {
     if (await bcrypt.compare(password, user.password_digest)) {
       const payload = {
         username: user.username,
-        email: user.email
+        email: user.email,
+        id: user._id
       }
 
       const token = jwt.sign(payload, TOKEN_KEY)
