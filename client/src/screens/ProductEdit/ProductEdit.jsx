@@ -8,13 +8,11 @@ const ProductEdit = (props) => {
   const params = useParams();
   const [product, setProduct] = useState({
     name: "",
-    details: "",
-    contactInfo: "",
-    imgURL1: "",
-    imgURL2: "",
-    imgURL3: "",
     condition: "",
+    details: "",
+    images: [],
     price: "",
+    contactInfo: "",
   });
 
   const [isUpdated, setUpdated] = useState(false);
@@ -24,21 +22,32 @@ const ProductEdit = (props) => {
     const fetchProduct = async () => {
       const product = await getProduct(id);
       setProduct(product);
+      console.log(product.images)
     };
     fetchProduct();
   }, [id]);
 
   const handleChange = (event) => {
+    const images = [...product.images]
     const { name, value } = event.target;
-    setProduct({
-      ...product,
-      [name]: value,
-    });
+    const i = event.target.id
+    images[i] = value
+    if (name === 'images') {
+      setProduct({
+        ...product,
+        images: [...images],
+      });
+    } else {
+      setProduct({
+        ...product,
+        [name]: value,
+      })
+    }
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
+    
     let { id } = params;
     const updated = await updateProduct(id, product);
     setUpdated(updated);
@@ -46,6 +55,21 @@ const ProductEdit = (props) => {
 
   if (isUpdated) {
     return <Redirect to={`/products/${params.id}`} />;
+  }
+
+  const editImage = (img, i) => {
+    return (
+      <>
+        <input
+          className="edit-input-image-link"
+          placeholder="Image Link"
+          id={i}
+          value={img}
+          name={`images`}
+          onChange={handleChange}
+        />
+      </>
+    );
   }
 
   return (
@@ -66,8 +90,9 @@ const ProductEdit = (props) => {
             required
             autoFocus
             onChange={handleChange}
-          />
-          <input
+            />
+            {product.images.map((v, i) => editImage(v, i))}
+          {/* <input
             className="edit-input-image-link"
             placeholder="Image Link"
             value={product.imgURL1}
@@ -90,7 +115,7 @@ const ProductEdit = (props) => {
             name="imgURL3"
             required
             onChange={handleChange}
-          />
+          /> */}
           <input
             className="input-contact-info"
             placeholder="contact info"
