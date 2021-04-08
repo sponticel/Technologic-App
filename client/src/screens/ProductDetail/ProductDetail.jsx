@@ -30,13 +30,11 @@ const ProductDetail = (props) => {
     deleteProduct(product._id)
     history.push('/products')
   }
-  const images = [product.imgURL1, product.imgURL2]
-  if (product.imgURL3) images.push(product.imgURL3)
   
   return (
     <Layout user={props.user}>
       <div className="product-detail">
-        <Carousel images={images}/>
+        <Carousel images={product.images}/>
         <div className="detail">
           <div className="name">{product.name}</div>
           <div className="condition">{product.condition}</div>
