@@ -1,6 +1,8 @@
 import React from "react";
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+
 
 const authenticatedOptions = (
   <>
@@ -36,18 +38,29 @@ const alwaysOptions = (
 );
 
 const Nav = ({ user }) => {
+  const [hamburger, setHamburger] = useState(true);
+  const [visible, setVisible] = useState(true)
+
   return (
     <nav>
       <div className="nav">
         <NavLink className="logo" to="/">
           Technologic
         </NavLink>
-        <div className="links">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"
+            className="bars"
+            alt="hamburger"
+            onClick={() => setHamburger(!hamburger)}
+          />
+        <div className="links"
+          style={{ display: hamburger && visible ? "flex" : "none" }}>
           {/* {user && <div className="link welcome">Welcome, {user.username}</div>} */}
           {alwaysOptions}
           {user ? authenticatedOptions : unauthenticatedOptions}
+          </div>
         </div>
-      </div>
+      
     </nav>
   );
 };
