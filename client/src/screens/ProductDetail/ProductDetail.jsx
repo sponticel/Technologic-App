@@ -30,22 +30,22 @@ const ProductDetail = (props) => {
     deleteProduct(product._id)
     history.push('/products')
   }
-  const images = [product.imgURL1, product.imgURL2, product.imgURL3]
+  
   return (
     <Layout user={props.user}>
       <div className="product-detail">
-        <Carousel images={images}/>
+        <Carousel images={product.images}/>
         <div className="detail">
           <div className="name">{product.name}</div>
           <div className="condition">{product.condition}</div>
           <div className="price">{`$${product.price}`}</div>
           <div className="details">{product.details}</div>
           <div className="button-container">
-            <button className="edit-button">
-              <Link className="edit-link" to={`/products/${product._id}/edit`}>
-                Edit
-              </Link>
-            </button>
+            <Link className="edit-link" to={`/products/${product._id}/edit`}>
+              <button className="edit-button">
+              Edit
+              </button>
+            </Link>
             <button
               className="delete-button"
               onClick={delProd}

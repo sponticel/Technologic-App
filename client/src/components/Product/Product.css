@@ -1,14 +1,19 @@
 .product-card {
   display: flex;
-  /* flex-direction: row; */
-  /* flex-flow: column-wrap; */
-  justify-content: center;
+  flex-direction: row;
+  flex-flow: column-wrap;
+  /* justify-content: center; */
   align-items: center;
-  border: solid red 4px; 
+  /* border: solid red 4px;  */
   width: 300px;
   height: 300px;
-  
+  margin-bottom: 80px;
+  margin-right: 80px;
 }
+
+/* * {
+  border: solid gold 4px;
+} */
 
 .product-image {
   opacity: 1;
@@ -18,6 +23,7 @@
   transition: .5s ease;
   backface-visibility: hidden;
   /* align-items: center; */
+  /* background: #222; */
 }
 
 .product {
@@ -35,25 +41,43 @@
   opacity: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   /* position: absolute; */
   /* top: 50%;
   left: 50%; */
   /* transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%); */
-  text-align: center;
-  /* align-content: flex-end; */
-  color: rgb(10, 0, 0);
+  /* text-align: center; */
+  /* align-content: space-between; */
+  /* background-color: rgb(10, 0, 0); */
   font-size: 25px;
   /* padding: 100px; */
-  border: solid gold 4px;
+  /* border: solid gold 4px; */
+  /* text-indent: 50px; */
+  background-color: black;
+  height: 100%;
+  width: 100%;
 }
 
-.product-card:hover .product-image {
-  opacity: 0.3;
+.middle-info {
+  /* display: flex; */
+  /* align-items: center; */
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  
+  text-decoration: none; 
+  color: white;
 }
 
-.product-card:hover .middle {
-  opacity: 1;
+.product-card:hover {
+  /* opacity: 0.5; */
+  /* background-color: black; */
+}
+
+.product-card:hover .middle:hover {
+  opacity: 0.5;
+  
 }
 
 /* .hover-name, .hover-price {
@@ -88,13 +112,17 @@
 } */
 
 @media (max-width: 500px) {
-  .product {
+  .product-card {
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 60px;
   }
-  .product-image {
-      width: 180px;
-      margin: 15px;
-      padding: 10px;
+  .products {
+      margin-left: 85px;
   }
+  .sort-container {
+      margin-left: 50px;
+  }
+  .search-form {
+      margin-left: 70px;
+  } 
 }

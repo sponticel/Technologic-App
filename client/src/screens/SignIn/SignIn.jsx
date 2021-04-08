@@ -58,11 +58,16 @@ const SignIn = (props) => {
   const { username, password } = form;
 
   return (
-    <div className="signin-form-container">
-      <Nav /> 
-      <form className="sign-in" onSubmit={onSignIn}>
-        <h3>Sign In</h3>
-        <label>Username</label>
+    <>
+    <Nav /> 
+    <div className="form-container">
+      <div className="quote">
+        <h1>Technologic</h1>
+        <h3><em>Inspirational quote</em></h3>
+        </div>
+        <div className="input-container">
+        <form onSubmit={onSignIn}>
+          <label className="label">Username</label>
         <input
           required
           type="text"
@@ -71,7 +76,7 @@ const SignIn = (props) => {
           placeholder="Enter Username"
           onChange={handleChange}
         />
-        <label>Password</label>
+        <label className="label">Password</label>
         <input
           required
           name="password"
@@ -81,9 +86,11 @@ const SignIn = (props) => {
           onChange={handleChange}
         />
         {renderError()}
-      </form>
-    </div>
-  );
+          </form>
+          </div>
+      </div>
+      </>
+  );   
 };
 
 export default SignIn;

@@ -9,9 +9,7 @@ const ProductCreate = (props) => {
     name: "",
     condition: "",
     details: "",
-    imgURL1: "",
-    imgURL2: "",
-    imgURL3: "",
+    images: [...Array(3).fill('')],
     price: "",
     contactInfo: "",
   });
@@ -19,11 +17,21 @@ const ProductCreate = (props) => {
   const [isCreated, setCreated] = useState(false);
 
   const handleChange = (event) => {
+    const images = [...product.images]
     const { name, value } = event.target;
-    setProduct({
-      ...product,
-      [name]: value,
-    });
+    const i = event.target.id
+    images[i] = value
+    if (name === 'images') {
+      setProduct({
+        ...product,
+        images: [...images],
+      });
+    } else {
+      setProduct({
+        ...product,
+        [name]: value,
+      })
+    }
   };
 
   const handleSubmit = async (event) => {
@@ -35,57 +43,74 @@ const ProductCreate = (props) => {
   if (isCreated) {
     return <Redirect to={`/products`} />;
   }
-  return (
-    <Layout user={props.user}>
-      <form className="create-form" onSubmit={handleSubmit}>
-        <input
-          className="input-name"
-          placeholder="Name"
-          value={product.name}
-          name="name"
-          required
-          autoFocus
-          onChange={handleChange}
-        />
-        <input
-          className="condition"
-          placeholder="condition"
-          value={product.condition}
-          name="condition"
-          required
-          autoFocus
-          onChange={handleChange}
-        />
-        <input
-          className="input-price"
-          placeholder="Price"
-          value={product.price}
-          name="price"
-          required
-          onChange={handleChange}
-        />
-        <textarea
-          className="textarea-details"
-          rows={10}
-          placeholder="Details"
-          value={product.details}
-          name="details"
-          required
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          className="input-contact-info"
-          placeholder="Contact Info"
-          value={product.contactInfo}
-          name="contactInfo"
-          required
-          // autoFocus
-          onChange={handleChange}
-        />
+  
+  const addImage = (img, i) => {
+    return (
+      <>
         <input
           className="input-image-link"
           placeholder="Image Link"
+          id={i}
+          value={img}
+          name={`images`}
+          onChange={handleChange}
+        />
+      </>
+    );
+  }
+
+  return (
+    <Layout user={props.user}>
+      <div className="create-form">
+        <form className="input-add" onSubmit={handleSubmit}>
+          <input
+            className="input-name"
+            placeholder="Name"
+            value={product.name}
+            name="name"
+            required
+            autoFocus
+            onChange={handleChange}
+          />
+          <input
+            className="input-condition"
+            placeholder="Condition"
+            value={product.condition}
+            name="condition"
+            required
+            // autoFocus
+            onChange={handleChange}
+          />
+          <input
+            className="input-price"
+            placeholder="Price"
+            value={product.price}
+            name="price"
+            required
+            onChange={handleChange}
+          />
+          <textarea
+            className="textarea-details"
+            rows={10}
+            placeholder="Details"
+            value={product.details}
+            name="details"
+            required
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            className="input-contact-info"
+            placeholder="Contact Info"
+            value={product.contactInfo}
+            name="contactInfo"
+            required
+            onChange={handleChange}
+          />
+          {product.images.map((v, i) => addImage(v, i))}
+          {/* <input
+          className="input-image-link"
+          placeholder="Image Link 1"
           value={product.imgURL1}
           name="imgURL1"
           required
@@ -106,11 +131,12 @@ const ProductCreate = (props) => {
           name="imgURL3"
           // required
           onChange={handleChange}
-        />
-        <button type="submit" className="submit-button">
-          Submit
-        </button>
-      </form>
+        /> */}
+          <button type="submit" className="submit-button">
+            Submit
+          </button>
+        </form>
+      </div>
     </Layout>
   );
 };

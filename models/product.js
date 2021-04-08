@@ -5,12 +5,11 @@ const Product = new Schema(
   {
     name: { type: String, required: true },
     condition: { type: String, required: true },
-    imgURL1: { type: String, required: true },
-    imgURL2: { type: String, required: false },
-    imgURL3: { type: String, required: false },
+    images: [{ type: String }],
     details: { type: String, required: true },
     price: { type: String, required: true },
     contactInfo: { type: String, required: true },
+    userId: { type: Schema.Types.ObjectId, ref: 'users' }
   },
   { timestamps: true }
 )
