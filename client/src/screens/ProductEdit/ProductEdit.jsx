@@ -13,6 +13,7 @@ const ProductEdit = (props) => {
     images: [],
     price: "",
     contactInfo: "",
+    userId: props.user.id
   });
 
   const [isUpdated, setUpdated] = useState(false);
