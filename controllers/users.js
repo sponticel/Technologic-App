@@ -2,6 +2,7 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const User = require('../models/user')
 const db = require('../db/connection')
+const Product = require('../models/product')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
@@ -65,8 +66,51 @@ const verify = async (req, res) => {
   }
 }
 
+const getUsers = async (req, res) => {
+  try {
+    const users = await User.find()
+    res.json(users)
+  } catch (error) {
+    res.status(500).json({ error: error.message })
+  }
+}
+
+const getUser = async (req, res) => {
+  // Getting the User includes getting all the Users' products
+  try {
+    const user = await User.findById(req.params.id).populate('products')
+    res.json(user)
+  } catch (error) {
+    res.status(500).json({ error: error.message })
+  }
+}
+
+const getUserProducts = async (req, res) => {
+  // This is specifically only returning the Products of the specified User
+  try {
+    const user = await User.findById(req.params.id)
+    const products = await Product.find({ userId: user.id })
+    res.json(products)
+  } catch (error) {
+    res.status(500).json({ error: error.message })
+  }
+}
+
+const getUserProduct = async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.productId)
+      res.json(product)
+  } catch (error) {
+    res.status(500).json({ error: error.message })
+  }
+}
+
 module.exports = {
   signUp,
   signIn,
-  verify
+  verify,
+  getUsers,
+  getUser,
+  getUserProducts,
+  getUserProduct
 }
