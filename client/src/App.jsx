@@ -57,7 +57,8 @@ const App = () => {
           <ProductDetail user={user} />
         </Route>
         <Route to="/user">
-          <UserDetail user={user} />
+          {user && <UserDetail user={user} />}
+          
         </Route>
       </Switch>
     </div>
