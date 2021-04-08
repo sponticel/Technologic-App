@@ -133,9 +133,11 @@ const ProductCreate = (props) => {
           // required
           onChange={handleChange}
         /> */}
+          <div className="add-product">
           <button type="submit" className="submit-button">
-            Submit
+              Submit
           </button>
+          </div>
         </form>
       </div>
     </Layout>

@@ -1,12 +1,14 @@
 .create-form {
-  padding: 30px;
   display: flex;
   flex-direction:column;
-  /* grid-template-columns: repeat(1,1fr); */
-  height: 100%;
-  width: 100%;
+  width: 80%;
   justify-content: space-evenly;
-  border: var(--gunmetal) solid 3px;
+  padding: 10px;
+  margin: 4em auto;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--aqua);
+  border-radius: 15px;
+  box-shadow: 12px 12px 15px 5px #686868;
 }
 
 .input-add{
@@ -18,9 +20,7 @@ input:focus, textarea:focus, select:focus {
   outline: none;
 }
 
- input, textarea { 
-  /* font-size: 48px;
-  font-family: 'Montserrat', sans-serif; */
+input, textarea { 
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
@@ -37,25 +37,7 @@ textarea {
   font-family: var(--ff);
 }
 
-.input-condition {
-  font-size: 24px;
-  font-family: var(--ff);
-}
-
-.input-price {
-  font-size: 24px;
-  font-family: var(--ff);
-}
-
-.input-image-link {
-  font-size: 24px;
-  font-family: var(--ff);
-}
-.textarea-details{
-  font-size: 24px;
-  font-family: var(--ff);
-}
-.input-contact-info{
+.input-condition, .input-price, .input-image-link, .textarea-details, .input-contact-info {
   font-size: 24px;
   font-family: var(--ff);
 }
@@ -63,13 +45,18 @@ textarea {
 .submit-button {
   font-size: 22px;
   font-family: var(--ff);
-  height: 40px;
+  width: 200px;
   margin: 40px;
   background-color: var(--aqua);
   color: var(--gunmetal);
   border: none;
   box-shadow: 2px 2px 10px 2px #CECECE;
+  border-radius: 15px;
   cursor: pointer;
+}
+
+.add-product{
+  text-align:center;
 }
 
 @media (max-width: 500px) {
