@@ -38,8 +38,8 @@ const alwaysOptions = (
 );
 
 const Nav = ({ user }) => {
-  const [hamburger, setHamburger] = useState(true);
-  const [visible, setVisible] = useState(true);
+  const [hamburger, setHamburger] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const handleResize = (e) => {
@@ -63,12 +63,12 @@ const Nav = ({ user }) => {
         <NavLink className="logo" to="/">
           Technologic
         </NavLink>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"
-            className="bars"
-            alt="hamburger"
-            onClick={() => setHamburger(!hamburger)}
-          />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"
+          className="bars"
+          alt="hamburger"
+          onClick={() => setHamburger(!hamburger)}
+        />
         <div className="links"
           style={{ display: hamburger && visible ? "flex" : "none" }}>
           {/* {user && <div className="link welcome">Welcome, {user.username}</div>} */}
