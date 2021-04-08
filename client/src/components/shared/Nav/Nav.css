@@ -32,7 +32,7 @@ nav {
   max-width: 30vw;
   transition: 250ms all;
   color: var(--aqua);
-  padding-top: 10px;
+  padding: 10px;
 }
 
 .logo:hover {
@@ -82,7 +82,7 @@ nav {
     justify-content: flex-end;
   }
 }
-img {
+.bars{
   width: 24px;
   height: 24px;
   padding: 2px;
@@ -95,7 +95,7 @@ img {
     align-items: space-between;
     justify-content: space-around;
   }
-  img {
+  .bars{
     display: block;
     padding: 5px;
   }

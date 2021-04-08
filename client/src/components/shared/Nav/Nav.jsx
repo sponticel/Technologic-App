@@ -38,8 +38,8 @@ const alwaysOptions = (
 );
 
 const Nav = ({ user }) => {
-  const [hamburger, setHamburger] = useState(false);
-  const [visible, setVisible] = useState(false);
+  const [hamburger, setHamburger] = useState(true);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const handleResize = (e) => {
