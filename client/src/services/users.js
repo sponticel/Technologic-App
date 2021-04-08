@@ -42,9 +42,11 @@ export const signOut = async user => {
 // }
 
 export const verifyUser = async () => {
-    const token = localStorage.getItem('token')
+  const token = localStorage.getItem('token')
+ 
     if (token) {
-        const res = await api.get('/verify')
+      const res = await api.get('/verify')
+      
         return res.data
     }
     return false

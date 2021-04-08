@@ -37,11 +37,11 @@ class Carousel extends React.Component {
         <div className="carousel-main">
           <Slider>
             {this.images.map((i) => (
-              <>
+              
                 <Slide key={`carousel-img-key-${key++}`} index={key}>
                   <img id="myImg" src={i} alt="" />
                 </Slide>
-              </>
+              
             ))}
           </Slider>
           <div className="carousel-buttons">
@@ -51,7 +51,7 @@ class Carousel extends React.Component {
         </div>
         <div className="carousel-dots">
           {this.images.map((v, i) => (
-            <Dot slide={i}>
+            <Dot key={i} slide={i} >
               <img className="carousel-dot-img" src={v} alt=""/>
             </Dot>
           ))}
