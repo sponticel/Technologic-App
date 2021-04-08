@@ -34,7 +34,7 @@ const ProductDetail = (props) => {
   return (
     <Layout user={props.user}>
       <div className="product-detail">
-        <Carousel images={product.images} />
+        <Carousel className="carousel" images={product.images} />
         <div className="detail">
           <div className="name">{product.name}</div>
           <div className="condition">{product.condition}</div>
