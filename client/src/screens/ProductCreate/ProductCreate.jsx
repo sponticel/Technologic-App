@@ -109,8 +109,9 @@ const ProductCreate = (props) => {
           />
           {product.images.map((v, i) => addImage(v, i))}
           <button type="submit" className="submit-button">
-            Submit
+              Submit
           </button>
+          </div>
         </form>
       </div>
     </Layout>
