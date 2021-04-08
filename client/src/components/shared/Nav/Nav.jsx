@@ -59,10 +59,10 @@ const Nav = ({ user }) => {
 
   return (
     <nav>
-      <div className="nav">
         <NavLink className="logo" to="/">
           Technologic
         </NavLink>
+      <div className="nav">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"
           className="bars"

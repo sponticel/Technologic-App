@@ -19,8 +19,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 input, textarea { 
-  /* font-size: 48px;
-  font-family: 'Montserrat', sans-serif; */
+  
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
