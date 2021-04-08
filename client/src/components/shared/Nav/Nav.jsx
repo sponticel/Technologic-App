@@ -39,7 +39,23 @@ const alwaysOptions = (
 
 const Nav = ({ user }) => {
   const [hamburger, setHamburger] = useState(true);
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleResize = (e) => {
+      if (window.innerWidth > 425) {
+        setHamburger(true)
+        setVisible(true)
+      } else if (window.innerWidth <= 425) {
+        setHamburger(false)
+      }
+    }
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+
+    }
+  },[])
 
   return (
     <nav>
