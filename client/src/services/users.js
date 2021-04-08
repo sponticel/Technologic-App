@@ -51,4 +51,22 @@ export const verifyUser = async () => {
     }
     return false
 }
+
+export const getUsers = async () => {
+  try {
+    const res = await api.get('/users')
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
+
+export const getUserProducts = async (id) => {
+  try {
+    const res = await api.get(`/users/${id}/products`)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
 // hi
