@@ -13,7 +13,7 @@ const ProductEdit = (props) => {
     images: [],
     price: "",
     contactInfo: "",
-    userId: props.user.id
+    userId: props.user && props.user.id,
   });
 
   const [isUpdated, setUpdated] = useState(false);
@@ -23,17 +23,17 @@ const ProductEdit = (props) => {
     const fetchProduct = async () => {
       const product = await getProduct(id);
       setProduct(product);
-      console.log(product.images)
+      console.log(product.images);
     };
     fetchProduct();
   }, [id]);
 
   const handleChange = (event) => {
-    const images = [...product.images]
+    const images = [...product.images];
     const { name, value } = event.target;
-    const i = event.target.id
-    images[i] = value
-    if (name === 'images') {
+    const i = event.target.id;
+    images[i] = value;
+    if (name === "images") {
       setProduct({
         ...product,
         images: [...images],
@@ -42,13 +42,13 @@ const ProductEdit = (props) => {
       setProduct({
         ...product,
         [name]: value,
-      })
+      });
     }
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
+
     let { id } = params;
     const updated = await updateProduct(id, product);
     setUpdated(updated);
@@ -60,18 +60,17 @@ const ProductEdit = (props) => {
 
   const editImage = (img, i) => {
     return (
-      <>
-        <input
-          className="edit-input-image-link"
-          placeholder="Image Link"
-          id={i}
-          value={img}
-          name={`images`}
-          onChange={handleChange}
-        />
-      </>
+      <input
+        key={i}
+        className="edit-input-image-link"
+        placeholder="Image Link"
+        id={i}
+        value={img}
+        name={`images`}
+        onChange={handleChange}
+      />
     );
-  }
+  };
 
   return (
     <Layout user={props.user}>
@@ -91,8 +90,8 @@ const ProductEdit = (props) => {
             required
             autoFocus
             onChange={handleChange}
-            />
-            {product.images.map((v, i) => editImage(v, i))}
+          />
+          {product.images.map((v, i) => editImage(v, i))}
           {/* <input
             className="edit-input-image-link"
             placeholder="Image Link"
