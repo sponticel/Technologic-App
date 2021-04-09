@@ -15,7 +15,7 @@ export default class UserDetail extends Component {
       userId: props.user.id,
     };
   }
-  
+
   componentDidMount() {
     const fetchUsers = async () => {
       const userProducts = await getUserProducts(this.state.userId);
@@ -54,9 +54,7 @@ export default class UserDetail extends Component {
       <>
         <Layout user={this.user}>
           {this.user ? this.profile(this.user) : "Maybe create an account."}
-          <div className="products">
-            {this.productsJSX()}
-          </div>
+          <div className="products">{this.productsJSX()}</div>
         </Layout>
       </>
     );
