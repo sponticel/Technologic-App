@@ -47,7 +47,6 @@ const App = () => {
           <Products user={user} />
         </Route>
         <Route path="/add-product">
-          
           {user && <ProductCreate user={user} />}
         </Route>
         <Route exact path="/products/:id/edit">
@@ -56,10 +55,7 @@ const App = () => {
         <Route exact path="/products/:id">
           <ProductDetail user={user} />
         </Route>
-        <Route to="/user">
-          {user && <UserDetail user={user} />}
-          
-        </Route>
+        <Route to="/user">{user && <UserDetail user={user} />}</Route>
       </Switch>
     </div>
   );
