@@ -32,5 +32,22 @@
 }
 
 .search-input::placeholder {
+
   letter-spacing: .3px;
+}
+
+@media (max-width: 500px) {
+  .search-form {
+    position: relative;
+  }
+
+  .search-input {
+    width: 30px;
+    margin: 0 auto;
+  }
+
+  .search-input:focus-within {
+    width: 150px;
+    cursor: text;
+  }
 }
