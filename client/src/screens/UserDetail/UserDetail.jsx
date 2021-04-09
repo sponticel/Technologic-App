@@ -5,6 +5,8 @@ import { getUserProducts } from "../../services/users";
 import Layout from "../../components/shared/Layout/Layout";
 import Product from "../../components/Product/Product";
 
+import "./UserDetail.css"
+
 export default class UserDetail extends Component {
   constructor(props) {
     super(props);
@@ -13,6 +15,7 @@ export default class UserDetail extends Component {
       queriedProducts: [],
       users: [],
       userId: props.user.id,
+      len: ''
     };
   }
 
@@ -21,6 +24,7 @@ export default class UserDetail extends Component {
       const userProducts = await getUserProducts(this.state.userId);
       this.setState({
         queriedProducts: userProducts,
+        len: userProducts.length
       });
     };
 
@@ -31,10 +35,13 @@ export default class UserDetail extends Component {
   }
 
   profile = (user) => (
-    <>
+    <div className="user-greeting">
       <h1>{`Hello, ${user.username}`}</h1>
-      <h3>{`${user.email}`}</h3>
-    </>
+      <div className="user-info">
+        <h3>{`${user.email}`}</h3>
+        <h3>{`${this.state.len} product${(this.state.len > 1) ? 's' : ''}`}</h3>
+      </div>
+    </div>
   );
 
   productsJSX() {
@@ -54,7 +61,7 @@ export default class UserDetail extends Component {
       <>
         <Layout user={this.user}>
           {this.user ? this.profile(this.user) : "Maybe create an account."}
-          <div className="products">{this.productsJSX()}</div>
+          <div className="products user-products">{this.productsJSX()}</div>
         </Layout>
       </>
     );

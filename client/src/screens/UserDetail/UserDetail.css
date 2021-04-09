@@ -1,3 +1,34 @@
-.user-detail-main {
-  font-size: 120px;
+.user-greeting {
+  width: 900px;
+  margin: 0 auto;
+  padding: 3% 0;
+}
+
+.user-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-evenly;
+}
+
+@media (max-width: 1110px) {
+  .user-greeting {
+    width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .user-info {
+    column-gap: 20px;
+    row-gap: 1px;
+  }
+}
+
+@media (max-width: 500px) {
+  .user-greeting {
+    /* width: 95%; */
+    padding-top: 100px;
+  }
+  .user-products {
+    padding-top: 0;
+  }
 }

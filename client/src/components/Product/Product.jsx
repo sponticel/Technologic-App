@@ -7,26 +7,19 @@ const Product = (props) => {
     <Link to={`/products/${props._id}`}>
       <div
         className="product-card"
-        style={{ backgroundImage: `url(${props.images[0]})` }}
+        style={{
+          background: `url(${props.images[0]}) var(--green)`,
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+        }}
       >
-        {/* <div className="product-image-container"> */}
-        {/* <img className="product-image" src={props.imgURL1} alt={props.name} /> */}
         <div className="middle">
-          <div className="middle-info">{props.name}</div>
-          <div className="middle-info">${props.price}</div>
+          <div className="middle-name">{props.name}</div>
+          <div className="middle-price">${props.price}</div>
         </div>
-        {/* </div> */}
-        {/* <img className="product-image" src={props.imgURL2} alt={props.name} />
-                <img className="product-image" src={props.imgURL3} alt={props.name} />*/}
-        {/* <div className="product-name">{props.name}</div>
-                <div className="product-condition">{props.condition}</div>
-                <div className="product-details">{props.details}</div>
-                <div className="price">{`$${props.price}`}</div>
-                <div className="product-contact-info">{props.contactInfo}</div> */}
       </div>
     </Link>
   );
 };
 
 export default Product;
-  
