@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import "./SignUp.css";
 import Nav from "../../components/shared/Nav/Nav";
-import { signUp, signIn } from "../../services/users";
-import { useHistory, Redirect } from "react-router-dom";
+import { signUp } from "../../services/users";
+import { Redirect } from "react-router-dom";
 
 const SignUp = (props) => {
-  const history = useHistory();
-
   const [redirect, setRedirect] = useState(false);
 
   const [form, setForm] = useState({
@@ -42,7 +40,9 @@ const SignUp = (props) => {
           });
         });
     } else {
-      alert("Passwords do not match.\n\nPlease make sure both passwords are identical.")
+      alert(
+        "Passwords do not match.\n\nPlease make sure both passwords are identical."
+      );
     }
   };
 
@@ -72,13 +72,14 @@ const SignUp = (props) => {
 
   return (
     <>
-
-    <Nav />
-    <div className="form-container">
-      <div className="quote">
-        <h1>Technologic</h1>
-        <h3><em>Inspirational quote</em></h3>
-      </div>
+      <Nav />
+      <div className="form-container">
+        <div className="quote">
+          <h1>Technologic</h1>
+          <h3>
+            <em>Inspirational quote</em>
+          </h3>
+        </div>
         <div className="input-container">
           <form onSubmit={onSignUp}>
             <label className="label">Username</label>
