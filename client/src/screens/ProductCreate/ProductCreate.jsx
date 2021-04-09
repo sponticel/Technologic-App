@@ -108,9 +108,11 @@ const ProductCreate = (props) => {
             onChange={handleChange}
           />
           {product.images.map((v, i) => addImage(v, i))}
+          <div className="add-product">
           <button type="submit" className="submit-button">
-              Submit
+            Submit
           </button>
+          </div>
         </form>
       </div>
     </Layout>

@@ -41,6 +41,7 @@ const ProductDetail = (props) => {
         <Carousel className="carousel" images={product.images} />
         <div className="detail">
           <div className="name">{product.name}</div>
+          <div className="details">{product.contactInfo}</div>
           <div className="condition">{product.condition}</div>
           <div className="price">{`$${product.price}`}</div>
           <div className="details">{product.details}</div>
