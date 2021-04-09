@@ -26,6 +26,10 @@ const ProductDetail = (props) => {
     return <h1>Loading...</h1>;
   }
 
+  const authOpt = () => {
+    
+  }
+
   const delProd = () => {
     deleteProduct(product._id);
     history.push("/products");
