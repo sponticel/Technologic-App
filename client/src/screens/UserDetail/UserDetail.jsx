@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { getUsers, getUserProducts } from "../../services/users";
+import { getUserProducts } from "../../services/users";
 
 import Layout from "../../components/shared/Layout/Layout";
 import Product from "../../components/Product/Product";
