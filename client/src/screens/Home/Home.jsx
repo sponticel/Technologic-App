@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 import "./Home.css";
 
@@ -7,7 +7,7 @@ const Home = (props) => {
   return (
     <>
       <div className="home">
-          <h1 className="home-logo">technologic</h1>
+        <h1 className="home-logo">technologic</h1>
         <Link to="/products">
           <div className="home-products">products</div>
         </Link>
@@ -15,7 +15,9 @@ const Home = (props) => {
           <div className="home-sign-in">sign-in</div>
         </Link>
         <Link to="/sign-up">
-          <div className="home-sign-up"><strong>sign-up</strong></div>
+          <div className="home-sign-up">
+            <strong>sign-up</strong>
+          </div>
         </Link>
       </div>
     </>
