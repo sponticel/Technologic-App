@@ -25,14 +25,16 @@ nav {
 .logo {
   font-family: "Kalam", cursive;
   text-align: center;
+  align-content: center;
   font-weight: bold;
-  font-size: 34px;
+  font-size: 40px;
   letter-spacing: -3px;
   flex: 1;
   max-width: 30vw;
   transition: 250ms all;
   color: var(--aqua);
   padding: 10px;
+  margin-top:10px;
 }
 
 .logo:hover {
@@ -41,7 +43,7 @@ nav {
 
 .links {
   flex: 2;
-  max-width: 60vw;
+  /* max-width: 60vw; */
   align-items: center;
   font-size: 18px;
   display: flex;
@@ -50,6 +52,7 @@ nav {
 .links a {
   text-decoration: none;
   color: var(--white);
+  padding: 5px 10px;
 }
 
 .link {
@@ -79,7 +82,7 @@ nav {
     display: flex;
     flex-direction: row;
     padding: 3px;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
   }
 }
 .bars{
