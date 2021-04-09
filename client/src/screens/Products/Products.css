@@ -55,6 +55,6 @@ select {
 @media (max-width: 500px) {
   .products {
     /* width: 95%; */
-    padding-top: 100px;
+    padding-top: 10px;
   }
 }

@@ -1,9 +1,7 @@
 .sort-container {
   position: absolute;
-  /* width: 83.5vw; */
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-end; */
   z-index: 998;
   padding-top: 150px;
 }
@@ -38,7 +36,10 @@ select {
   .sort-container {
       width: 100%;
       justify-content: center;
-      margin: 0px;
-      /* position:fixed; */
+      position: relative;
+      padding-top: 10px;
+  }
+  .sort {
+    margin: 0 auto;
   }
 }

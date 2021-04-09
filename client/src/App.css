@@ -33,3 +33,7 @@ p {
 a {
   text-decoration: none;
 }
+
+nav {
+  z-index: 1000;
+}

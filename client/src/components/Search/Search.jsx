@@ -10,7 +10,6 @@ const Search = (props) => {
         onChange={(e) => props.onChange(e)}
         name="Search"
         placeholder=""
-        onFocus="this.placeholder = 'Search'"
         type="text"
       />
     </form>
