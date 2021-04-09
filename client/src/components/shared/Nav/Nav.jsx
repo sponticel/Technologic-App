@@ -44,10 +44,10 @@ const Nav = ({ user }) => {
     //called when component mounts (opens/on the path or mounted on the screen) or when something in depency array changes
 
     const handleResize = (e) => {
-      if (window.innerWidth > 425) {
+      if (window.innerWidth > 800) {
         setHamburgerOptions(true);
         setVisible(true);
-      } else if (window.innerWidth <= 425) {
+      } else if (window.innerWidth <= 800) {
         setHamburgerOptions(false);
       }
     };
