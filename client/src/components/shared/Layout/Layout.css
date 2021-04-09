@@ -6,7 +6,7 @@
 
 .layout-children {
   flex: 2;
-  padding: 100px;
+  padding-top: 100px;
 }
 
 @media (max-width: 500px) {

@@ -95,3 +95,23 @@
   top: -230px;
   left: 345px;
 }
+
+@media (max-width: 1110px) {
+  .user-greeting {
+    width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .user-info {
+    column-gap: 20px;
+    row-gap: 1px;
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    --ifw: 300px;
+    --bh: -230px;
+  }
+}

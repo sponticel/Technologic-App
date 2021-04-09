@@ -4,15 +4,31 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
 }
 
 .search-input {
-  width: 70vw;
+  z-index: 999;
+  width: 0;
   font-size: 18px;
   letter-spacing: 0.1px;
-  padding: 12px 20px 12px 40px;
+  padding: 12px 12px 12px 40px;
   border: 1px solid #ddd;
-  margin: 40px;
+  border-radius: 15rem;
+  margin-left: 9vw;
+  background-image: url(https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  transition: 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.search-input:hover {
+  cursor: pointer;
+}
+
+.search-input:focus-within {
+  width: 20vw;
+  cursor: text;
 }
 
 .search-input::placeholder {
