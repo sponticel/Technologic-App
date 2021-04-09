@@ -63,7 +63,7 @@ const SignIn = (props) => {
     <div className="form-container">
       <div className="quote">
         <h1>Technologic</h1>
-        <h3><em>Where pre-loved is re-loved</em></h3>
+        <h3><em>Buy it, use it, break it, fix it...</em></h3>
         </div>
         <div className="input-container">
         <form onSubmit={onSignIn}>
