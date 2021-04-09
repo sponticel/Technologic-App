@@ -23,7 +23,6 @@ const ProductEdit = (props) => {
     const fetchProduct = async () => {
       const product = await getProduct(id);
       setProduct(product);
-      console.log(product.images);
     };
     fetchProduct();
   }, [id]);
@@ -75,12 +74,6 @@ const ProductEdit = (props) => {
   return (
     <Layout user={props.user}>
       <div className="product-edit">
-        {/* <div className="image-container"> */}
-        {/* <img
-            className="edit-product-image"
-            src={product.imgURL1}
-            alt={product.name}
-          /> */}
         <form className="edit-form-main" onSubmit={handleSubmit}>
           <input
             className="input-name"
@@ -92,30 +85,6 @@ const ProductEdit = (props) => {
             onChange={handleChange}
           />
           {product.images.map((v, i) => editImage(v, i))}
-          {/* <input
-            className="edit-input-image-link"
-            placeholder="Image Link"
-            value={product.imgURL1}
-            name="imgURL1"
-            required
-            onChange={handleChange}
-          />
-          <input
-            className="edit-input-image-link"
-            placeholder="Image Link"
-            value={product.imgURL2}
-            name="imgURL2"
-            required
-            onChange={handleChange}
-          />
-          <input
-            className="edit-input-image-link"
-            placeholder="Image Link"
-            value={product.imgURL3}
-            name="imgURL3"
-            required
-            onChange={handleChange}
-          /> */}
           <input
             className="input-contact-info"
             placeholder="contact info"
